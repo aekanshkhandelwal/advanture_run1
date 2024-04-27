@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: skyblue;
+    overflow: hidden;
+}
+.shake{
+    animation: shakebody 2s ease-in-out infinite; 
+
+}
+.gameContainer{
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    animation: shakebg 2s ease-in-out infinite;
+    animation: shakebg1 2s ease-in-out infinite;
+    
+}
+
+.dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 143px;
+    height: 154px;
+    position: absolute;
+    bottom: 10px;
+    left: 52px;
+}
+
+.obstacle{
+    width: 119px;
+    height: 120px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
+    left: 44vw;
+}
+
+.animateDino{
+    animation: dino 0.7s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 3s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:63px;
+    background-color: rgb(181, 224, 241);
+    border: 2px solid black;
+    display: flexbox;
+    justify-content: center;
+    width: 60vw;
+    left: 20vw;
+    font-size: 50px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#scoreCont{
+    font-size: 25px;
+    background-color: rgb(170, 215, 232);
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+    animation: shakebg2 2s ease-in-out infinite;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+@keyframes shakebody
+{
+    0%{
+        transform: translateY(-25px);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+    100%{
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes shakebg
+{
+    0%{
+        transform: translateY(-15px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(-15px);
+    }
+}
+@keyframes shakebg1
+{
+    0%{
+        transform: translateX(-25px);
+    }
+    25%{
+        transform: translateX(15px);
+    }
+    50%{
+        transform: translateX(-25px);
+    }
+    75%{
+        transform: translateX(15px);
+    }
+    100%{
+        transform: translateX(-25px);
+    }
+}
